@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies Selection</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Select Your Hobbies</h2>
+
+<form id="hobbiesForm">
+  <label> <input type="checkbox" name="hobby" value="reading"> Reading </label>
+  <label> <input type="checkbox" name="hobby" value="coding"> Coding </label>
+  <label> <input type="checkbox" name="hobby" value="traveling"> Traveling </label>
+  <label> <input type="checkbox" name="hobby" value="gaming"> Gaming </label>
+  <label> <input type="checkbox" name="hobby" value="music"> Listening to Music </label>
+  <button type="button" onclick="display()">Display Selected Hobbies</button>
+</form>
+<p id="selectedHobbies"></p>
+
+<script>
+function display() {
+  var form = document.getElementById('hobbiesForm');
+  var Element = document.getElementById('selectedHobbies');
+  var selectedHobbies = [];
+  var checkboxes = form.elements['hobby'];
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      selectedHobbies.push(checkboxes[i].value);
+    }
+  }
+  if (selectedHobbies.length > 0) {
+    Element.textContent = 'Selected Hobbies: ' + selectedHobbies.join(', ');
+  } else {
+    Element.textContent = 'No hobbies selected.';
+  }
+}
+</script>
+
+</body>
+</html>

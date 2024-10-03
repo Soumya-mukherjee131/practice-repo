@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Number</title>
+</head>
+<body>
+
+<label for="numberInput">Enter a number:</label>
+<input type="number" id="numberInput">
+<button onclick="displayFibonacci()">Display Fibonacci</button>
+
+<p id="result"></p>
+
+<script>
+function displayFibonacci() {
+  var inputElement = document.getElementById('numberInput');
+  var resultElement = document.getElementById('result');
+
+  var inputValue = parseInt(inputElement.value);
+
+  if (!isNaN(inputValue) && inputValue >= 0) {
+    var fibonacciResult = calculateFibonacci(inputValue);
+    resultElement.textContent = 'Fibonacci number under ' + inputValue + ': ' + fibonacciResult;
+  } else {
+    resultElement.textContent = 'Please enter a non-negative integer.';
+  }
+}
+
+function calculateFibonacci(n) {
+  if (n <= 1) {
+    return n;
+  } else {
+    return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+  }
+}
+</script>
+
+</body>
+</html>

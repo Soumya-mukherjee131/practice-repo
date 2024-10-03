@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control</title>
+</head>
+<body>
+    <label for="alertmsg">Alert message:</label>
+    <input type="button" value="Click me!" onclick="showAlert()">
+    <label for="promtmsg">Prompt message:</label>
+    <input type="button" value="Click me!" onclick="showPrompt()">
+    <label for="confirmmsg">Confirmation message:</label>
+    <input type="button" value="Click me!" onclick="showConfirmation()">
+    
+    <script>
+        // Encapsulate sensitive information in a function
+        function getSensitiveInfo() {
+            return "soumya";
+        }
+
+        function showAlert() {
+            alert("Hello there! Please write your name to get access. Click the second button.");
+        }
+
+        function showPrompt() {
+            var userName = prompt("Enter your Name:", "Enter your name");
+            if (userName !== null && userName !== "") {
+                showConfirmation(userName);
+            } else {
+                alert("Invalid name. Please try again.");
+            }
+        }
+
+        function showConfirmation(userName) {
+            var sensitiveName = getSensitiveInfo();
+            var isAccessAllowed = (userName.toLowerCase() === sensitiveName);
+            var confirmationMessage = isAccessAllowed ? "You can access now." : "Access denied.";
+            confirm(confirmationMessage);
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control</title>
+</head>
+<body>
+    <label for="alertmsg">Alert message:</label>
+    <input type="button" value="Click me!" onclick="showAlert()">
+    <label for="promtmsg">Prompt message:</label>
+    <input type="button" value="Click me!" onclick="showPrompt()">
+    <label for="confirmmsg">Confirmation message:</label>
+    <input type="button" value="Click me!" onclick="showConfirmation()">
+    
+    <script>
+        function showAlert() {
+            alert("Hello there! Please write your name to get access. Click the second button.");
+        }
+
+        function showPrompt() {
+            var userName = prompt("Enter your Name:", "Enter your name");
+            if (userName !== null && userName !== "") {
+                showConfirmation(userName);
+            } else {
+                alert("Invalid name. Please try again.");
+            }
+        }
+
+        function showConfirmation(userName) {
+            var isAccessAllowed = (userName.toLowerCase() === "soumya");
+            var confirmationMessage = isAccessAllowed ? "You can access now." : "Access denied.";
+            confirm(confirmationMessage);
+        }
+    </script>
+</body>
+</html>
+

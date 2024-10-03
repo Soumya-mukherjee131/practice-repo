@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        *{
+            margin: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .container{
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            align-content: flex-start; 
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <fieldset>
+        <legend>Basic informations- </legend>
+            <div>
+                <label for="getname">Name-</label>
+                <input type="text" id="getname" placeholder="Enter your name here"  style="width: 80%;">
+            </div>
+            <div>
+                <label for="getemail">Email-</label>
+                <input type="email" id="getemail" placeholder="Enter your mail here" style="width: 80%;">
+            </div>
+            <div>
+                <label for="getno">Contact-</label>
+                <input type="number" id="getno" placeholder="Enter your mobile/telphone number" style="width: 80%;">
+            </div>
+            <div>
+                <label for="getmarks1">10th percentage-</label>
+                <input type="number" id="getmarks1" placeholder="Your 10th standard marks.Don't use % sign" style="width: 80%;">
+            </div>
+            <div>
+                <label for="getmarks2">12th percentage-</label>
+                <input type="number" id="getmarks2" placeholder="Your 12th standard marks.Don't use % sign" style="width: 80%;">
+            </div>
+            <div>
+                <label for="getmarks3">bachelor's percentage-</label>
+                <input type="number" id="getmarks3"v placeholder="Your graduation CGPA.Don't use % sign." style="width: 80%;">
+            </div>
+            <div>
+                <label for="getsub">bachelor's course-</label>
+                <input type="text" id="getsub" placeholder="Enter your couser here." style="width: 80%;">
+            </div>
+            <div>
+                Gender- Male<input type="radio" name="Mygender">Female-<input type="radio" name="Mygender">
+            </div>
+    </fieldset>
+    <fieldset>
+        <legend>Course selection-</legend>
+            <label for="getcourse">Course-</label>
+            <select name="mycourse" id="getcourse">
+                <optgroup label="All courseslist - ">
+                    <option value="none">select course</option>
+                    <option value="">MCA</option>
+                    <option value="">MBA</option>
+                    <option value="">MTECH</option>
+                    <option value="">MSC</option>
+                </optgroup>
+            </select>
+    </fieldset>
+</div>
+</body>
+</html>

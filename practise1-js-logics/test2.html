@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise</title>
+</head>
+<body>
+    <h1>Multiplication and Division </h1>
+    <label for="FirstNumber"></label>
+    <input type="number" id="FirstNumber" placeholder="Enter the first number">
+    <label for="SecondNumber"></label>
+    <input type="number" id="SecondNumber" placeholder="Enter the second number">
+    <br>
+    <button type="submit" onclick="operations()">click me</button>
+    <p id="result"></p>
+    <script>
+        function operations(a,b)
+        {
+            var inputElement1 = document.getElementById('FirstNumber');
+            var inputElement2 = document.getElementById('SecondNumber');
+            var resultElement = document.getElementById('result');
+
+            var value1 = parseFloat(inputElement1.value);
+            var value2 = parseFloat(inputElement2.value);
+
+            var result1 = value1*value2;
+            if(value1 < value2){
+                var result2 = value2/value1;
+            }
+            else{
+                var result2 = value1/value2;
+            }
+            resultElement.textContent = 'Multiplication Result: ' + result1 + ', Division Result: ' + result2;
+        }
+    </script>
+</body>
+</html>
